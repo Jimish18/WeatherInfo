@@ -32,17 +32,33 @@
 #mainDetail
 {
     position: absolute;
-    bottom: 50px;
-    left: 50px;
+    bottom: 100px;
+    left: 90px;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#temperatureDiv,#cityAndTimeDiv,#weatherNatureDiv
+{
+    margin: 0px 20px;
 }
 
 #temperature
 {
-    font-size: 6rem;
+    font-size: 9rem;
 }
 
-#weatherNature img
+#weatherNatureDiv img
 {
     filter: invert(100%);
+    height: 90px;
+    width: 90px;
+}
+
+#cityAndTimeDiv h1
+{
+    font-size: 3.8rem;
 }
