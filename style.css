@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
 *
 {
     margin: 0;
@@ -22,6 +24,25 @@
     left: 30px;
     color: white;
     background: #000000db;
-    padding: 4px 20px;
+    padding: 5px 20px;
     border-radius: 30px;
+    font-family: 'Merriweather', serif;
+}
+
+#mainDetail
+{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #ffffff;
+}
+
+#temperature
+{
+    font-size: 6rem;
+}
+
+#weatherNature img
+{
+    filter: invert(100%);
 }
