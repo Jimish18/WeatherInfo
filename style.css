@@ -106,3 +106,47 @@
     border-bottom:2px solid  #ffffff;
     padding: 8px 8px;
 }
+
+#topCities
+{
+    margin: 25px 0px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.underline
+{
+    width: 90%;
+    height: 1px;
+    background: #505050;
+    margin: 8px 0px;
+}
+
+#citiesRow
+{
+    margin-top: 15px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.city
+{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    text-align: center;    
+}
+
+.city img
+{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.city span
+{
+    margin-top: 10px;
+}
