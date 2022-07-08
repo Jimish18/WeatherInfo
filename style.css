@@ -105,11 +105,13 @@
     border: none;
     border-bottom:2px solid  #ffffff;
     padding: 8px 8px;
+    color: #ffffff;
+    outline: none;
 }
 
 #topCities
 {
-    margin: 25px 0px;
+    margin: 40px 0px;
     color: white;
     letter-spacing: 1px;
 }
@@ -119,12 +121,12 @@
     width: 90%;
     height: 1px;
     background: #505050;
-    margin: 8px 0px;
+    margin: 10px 0px;
 }
 
 #citiesRow
 {
-    margin-top: 15px;
+    margin-top: 25px;
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -149,4 +151,27 @@
 .city span
 {
     margin-top: 10px;
+}
+
+#weatherDetails,#locationDetails
+{
+    color: #ffffff;
+    margin: 10px 0px;
+}
+
+.detailsColumn
+{
+    width: 90%;
+}
+
+.detailRow
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0px;
+}
+
+.detailRow div
+{
+    display: inline-block;
 }
