@@ -43,7 +43,7 @@
 
 #temperatureDiv,#cityAndTimeDiv,#weatherNatureDiv
 {
-    margin: 0px 20px;
+    margin: 0px 10px;
 }
 
 #temperature
@@ -61,4 +61,48 @@
 #cityAndTimeDiv h1
 {
     font-size: 3.8rem;
+}
+
+#otherDetailsSection 
+{
+    height: 100vh;
+    width: 620px;
+    position: absolute;
+    right: 0px;
+    padding: 0px 0px 0px 50px;
+
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 10px;
+}
+
+#searchCity
+{
+    padding: 25px 25px;
+    background: #FEE715FF;
+    border: none;
+}
+
+#searchCity img
+{
+    height: 50px;
+    width: 50px;
+}
+
+#cityInputForm
+{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+}
+
+#cityInput
+{
+    width: 60%;
+    background: transparent;
+    border: none;
+    border-bottom:2px solid  #ffffff;
+    padding: 8px 8px;
 }
