@@ -44,12 +44,19 @@
 
 #temperatureDiv,#cityAndTimeDiv,#weatherNatureDiv
 {
-    margin: 0px 10px;
+    margin: 10px 10px;
 }
 
 #temperature
 {
     font-size: 9rem;
+    display: flex;
+    line-height: 0.8;
+}
+
+#temperature span
+{
+    font-size: 2.5rem;
 }
 
 #weatherNatureDiv img
@@ -244,41 +251,67 @@
 
 @media only screen and (max-width : 1200px)
 {
-    #otherDetailsSection
+    #mainDetail
     {
-        width: 420px;
-        padding: 0px 0px 0px 30px;
+        flex-direction: column;
+        height: 100vh;
+        bottom: auto;
+        left: 3rem;
     }
 
     #temperature
     {
-        font-size: 6rem;
+        font-size: 5.5rem;
+    }
+
+    #cityAndTimeDiv h1
+    {
+        font-size: 2rem;
     }
 
     #cityAndTimeDiv h2
     {
         font-size: 1.2rem;
     }
+}
 
-    #weatherNatureDiv img
+@media only screen and (max-width : 880px)
+{
+    #hyderabad
     {
-        height: 65px;
-        width: 65px;
+        display: none;
     }
 
-    #weatherNatureDiv h2
+    #otherDetailsSection
     {
-        font-size: 1.2rem;
-    } 
+        width: 400px;
+    }
+}
 
+@media only screen and (max-width : 780px)
+{
+    #mainDetail
+    {
+        left: 1rem;
+    }
+}
+
+@media only screen and (max-width : 730px)
+{
     .city img
     {
-        height: 65px;
-        width: 65px;
+        height: 70px;
+        width: 70px;
     }
 
     .city span
     {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    #otherDetailsSection
+    {
+        padding: 0px 0px 0px 25px;
+        width: 330px;
     }
 }
