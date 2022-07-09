@@ -23,6 +23,7 @@
     position: absolute;
     top: 25px;
     left: 30px;
+    z-index: 1;
     color: white;
     background: #000000db;
     padding: 5px 20px;
@@ -124,6 +125,35 @@
     letter-spacing: 1px;
 }
 
+#mainDetailMobiles
+{
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin: 20px 0px;
+    text-align: center;
+}
+
+#temperatureMobiles
+{
+    font-size: 4.5rem;
+    display: flex;
+}
+
+#temperatureMobiles span
+{
+    font-size: 3.5rem;
+}
+
+#weatherNatureDivMobiles img
+{
+    height: 70px;
+    width: 70px;
+    filter: invert(1);
+}
+
 .underline
 {
     width: 90%;
@@ -182,6 +212,8 @@
 .detailRow div
 {
     display: inline-block;
+    color: #FEE715FF;
+    font-weight: bold;
 }
 
 /* -----------------> Media Query <----------------- */
@@ -313,5 +345,69 @@
     {
         padding: 0px 0px 0px 25px;
         width: 330px;
+    }
+}
+
+@media only screen and (max-width : 650px)
+{
+    #otherDetailsSection
+    {
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(0px);
+        padding: 0px 30px;
+    }
+
+    #mainDetail
+    {
+        display: none;
+    }
+
+    #topCities
+    {
+        display: none;
+    }
+
+    #logo h2
+    {
+        font-size: 1.2rem;
+    }
+
+    .underline
+    {
+        width: 100%;
+    }
+
+    .detailsColumn
+    {
+        width: 100%;
+    }
+
+    #searchCityDiv
+    {
+        margin: 30px 0px;
+    }
+
+    #mainDetailMobiles
+    {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width : 620px)
+{
+    #temperatureMobiles 
+    {
+        font-size: 3.8em;
+    }
+
+    #cityAndTimeDivMobiles h1
+    {
+        font-size: 1.8rem;
+    }
+
+    #cityAndTimeDivMobiles h2,#weatherNatureDivMobiles h2
+    {
+        font-size: 1rem;
     }
 }
