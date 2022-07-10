@@ -34,6 +34,7 @@
 
 #logoMobiles
 {
+    display: none;
     color: white;
     background: #000000db;
     padding: 5px 20px;
@@ -365,6 +366,11 @@
     #logo
     {
         display: none;
+    }
+
+    #logoMobiles
+    {
+        display: block;
     }
 
     #otherDetailsSection
