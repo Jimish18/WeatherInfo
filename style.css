@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #container
@@ -31,6 +31,18 @@
     font-family: 'Merriweather', serif;
 }
 
+
+#logoMobiles
+{
+    color: white;
+    background: #000000db;
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-family: 'Merriweather', serif;
+    width: fit-content;
+    margin: 20px 0px;
+}
+
 #mainDetail
 {
     position: absolute;
@@ -52,7 +64,7 @@
 {
     font-size: 9rem;
     display: flex;
-    line-height: 0.8;
+    /* line-height: 0.8; */
 }
 
 #temperature span
@@ -350,12 +362,34 @@
 
 @media only screen and (max-width : 650px)
 {
+    #logo
+    {
+        display: none;
+    }
+
     #otherDetailsSection
     {
         width: 100vw;
         background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(0px);
         padding: 0px 30px;
+    }
+
+    #cityInput
+    {
+        width: 90%;
+    }
+
+    #searchCity
+    {
+        padding: 15px 18px;
+        border-radius: 100%;
+    }
+
+    #searchCity img
+    {
+        height: 25px;
+        width: 25px;
     }
 
     #mainDetail
@@ -385,7 +419,7 @@
 
     #searchCityDiv
     {
-        margin: 30px 0px;
+        margin: 0px 0px;
     }
 
     #mainDetailMobiles
