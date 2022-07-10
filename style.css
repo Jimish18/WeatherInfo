@@ -131,6 +131,11 @@
     outline: none;
 }
 
+#cityInput::placeholder
+{
+    color: #ffffff;
+}
+
 #topCities
 {
     margin: 30px 0px;
