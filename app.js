@@ -9,6 +9,8 @@ let temperature = document.getElementById("temperature");
 let temperatureMobiles = document.getElementById("temperatureMobiles");
 let cityDisplay = document.getElementsByClassName("cityDisplay");
 let weatherNature = document.getElementsByClassName("weatherNature");
+let weatherNatureImgDisplay = document.getElementsByClassName("weatherNatureImgDisplay");
+console.log(weatherNatureImgDisplay);
 
 // -----------------> Functions <------------------//
 function randomNumberGenerator()
@@ -80,10 +82,49 @@ function getWeatherInfo(byCityName,cityName)
                     element.innerText = `${data.name}`;
                 }
 
+                let weatherNatureType = data.weather[0].main;
+
                 // Display Weather Nature
                 for(element of weatherNature)
                 {
-                    element.innerText = `${data.weather[0].main}`;
+                    element.innerText = `${weatherNatureType}`;
+                }
+
+                // Display Weather Nature Image
+                for(element of weatherNatureImgDisplay)
+                {
+                    if(weatherNatureType == `Thunderstorm`)
+                    {
+                        element.src = `./images/icons/weatherNature/thunderstorm.png`;
+                    }
+                    else if(weatherNatureType == `Drizzle`)
+                    {
+                        element.src = `./images/icons/weatherNature/drizzle.png`;
+                    }
+                    else if(weatherNatureType == `Rain`)
+                    {
+                        element.src = `./images/icons/weatherNature/rainy-day.png`;
+                    }
+                    else if(weatherNatureType == `Snow`)
+                    {
+                        element.src = `./images/icons/weatherNature/snowy.png`;
+                    }
+                    else if(weatherNatureType == `Mist` || weatherNatureType == `Fog` || weatherNatureType == `Smoke` || weatherNatureType == `Tornado`)
+                    {
+                        element.src = `./images/icons/weatherNature/cloudy-day.png`;
+                    }
+                    else if(weatherNatureType == `Clear`)
+                    {
+                        element.src = `./images/icons/weatherNature/sun.png`;
+                    }
+                    else if(weatherNatureType == `Clouds`)
+                    {
+                        element.src = `./images/icons/weatherNature/cloudy-day.png`;
+                    }
+                    else
+                    {
+                        element.src = `./images/icons/weatherNature/cloudy.png`;
+                    }
                 }
             }
             else
