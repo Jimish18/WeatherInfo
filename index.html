@@ -30,7 +30,7 @@
             </div>           
         </div>
         
-        <div id="otherDetailsSection">
+        <div id="otherDetailsSection" class="scroll">
 
             <div id="logoMobiles">
                 <h2>Weather Info</h2>
@@ -68,19 +68,19 @@
                 <h2>Top Cities</h2>
                 <div class="underline"></div>
                 <div id="citiesRow">
-                    <div class="city">
+                    <div class="city" onclick="getDetailsOfCities('Ahmedabad')">
                         <img src="./images/Cities/ahmedabad-sidiSaiyaadJali.jpg" alt="Ahmedabad">
                         <span>Ahmedabad</span>
                     </div>
-                    <div class="city">
+                    <div class="city" onclick="getDetailsOfCities('Delhi')">
                         <img src="./images/Cities/delhi-indiaGate.jpg" alt="Delhi">
                         <span>Delhi</span>
                     </div>
-                    <div class="city" id="mumbai">
+                    <div class="city" id="mumbai" onclick="getDetailsOfCities('Mumbai')">
                         <img src="./images/Cities/mumbai-tajHotel.jpg" alt="Mumbai">
                         <span>Mumbai</span>
                     </div>
-                    <div class="city" id="hyderabad">
+                    <div class="city" id="hyderabad" onclick="getDetailsOfCities('Hyderabad')">
                         <img src="./images/Cities/Hyderabad.png" alt="Hyderabad">
                         <span>Hyderabad</span>
                     </div>
@@ -113,7 +113,7 @@
                         <span>Wind Speed</span>
                         <div>
                             <span id="windSpeed">3.31</span>
-                            Km/h
+                            km/h
                         </div>
                     </div>
 
