@@ -5,8 +5,10 @@ console.log("Jay Shree Ram");
 
 // ----------------> Grab Elements <---------------------//
 let timeDetailsDisplay = document.getElementsByClassName("timeDetailsDisplay");
-
-
+let temperature = document.getElementById("temperature");
+let temperatureMobiles = document.getElementById("temperatureMobiles");
+let cityDisplay = document.getElementsByClassName("cityDisplay");
+let weatherNature = document.getElementsByClassName("weatherNature");
 
 // -----------------> Functions <------------------//
 function randomNumberGenerator()
@@ -26,8 +28,9 @@ function hourAndMinuteSymmetry(digit)
     }
 }
 
-// ---------------------> Time And Date Menipulation <---------------//
-setInterval(() => 
+
+// -------> Time And Date Menipulation Function<-------//
+function timeAndDateManipulation()
 {
     let newDate = new Date();
     let date = newDate.getDate();
@@ -47,8 +50,101 @@ setInterval(() =>
     {
         element.innerHTML = `${hour}:${minutes} - ${day}, ${date} ${month} '${year}`;
     }
-    
-}, 1000);
+}
+
+function getWeatherInfo(byCityName,cityName)
+{
+    let url;
+
+    if(byCityName == true)
+    {
+        url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a25833c8c704edfa54057bcc0af4f038&units=metric`;
+
+        fetch(url,{
+            method : `GET`,
+        }).then(response => response.json())
+        .then((data) =>
+        { 
+            if(data.cod == 200)
+            {
+                console.log(data);
+
+                // Display Temperature
+                let temp = data.main.temp.toString().slice(0,2);
+                temperature.innerHTML = `${temp}<span>°</span>`;
+                temperatureMobiles.innerHTML = `${temp}<span>°</span>`;
+
+                // Display City
+                for(element of cityDisplay)
+                {
+                    element.innerText = `${data.name}`;
+                }
+
+                // Display Weather Nature
+                for(element of weatherNature)
+                {
+                    element.innerText = `${data.weather[0].main}`;
+                }
+            }
+            else
+            {
+                alert(`${data.message}\nEnter Valid City Name`);
+            }
+        })
+    }
+}
+
+// ---------------------> Time And Date Menipulation <---------------//
+timeAndDateManipulation();
+setInterval(timeAndDateManipulation, 60000);
+
+
+getWeatherInfo(true,`Ahmedabad`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 navigator.geolocation.getCurrentPosition(function(position)
